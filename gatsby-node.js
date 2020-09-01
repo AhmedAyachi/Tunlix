@@ -1,5 +1,5 @@
 exports.onCreatePage=({page})=>{
-    if(page.path.includes("/404")){
+    if(page.path.startsWith("/404")){
         page.layout="404/404";
     }
 }

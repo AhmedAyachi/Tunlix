@@ -11,11 +11,10 @@
   },
   "license": "0BSD",
   "scripts": {
-    "build": "gatsby build",
     "start": "gatsby develop --open",
+    "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "clean": "gatsby clean"
   },
   "repository": {
     "type": "git",

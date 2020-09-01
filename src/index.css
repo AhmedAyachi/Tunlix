@@ -9,7 +9,6 @@
     -moz-user-select:none;
     -ms-user-select:none;
 }
-body{
+#___gatsby{
     overflow-x:hidden;
-    background-color:red;
 }

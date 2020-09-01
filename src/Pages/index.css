@@ -1,0 +1,15 @@
+:root{
+    font-size:1vw;
+}
+*{
+    margin:0;
+    padding:0;
+    outline:none;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+}
+body{
+    overflow-x:hidden;
+    background-color:red;
+}

@@ -1,0 +1,42 @@
+.moviecard{
+    position:relative;
+    display:inline-block;
+    border:2px solid white;
+    width:10%;
+    height:14rem;
+    margin:5px;
+    font-size:1rem;
+}
+.title{
+    position:absolute;
+    font-family:fredokaone;
+    font-size:1.5em;
+    color:whitesmoke;
+    top:1%;
+    margin:0 auto;left:0;right:0;
+    text-align:center;
+}
+.moviecard img{
+    width:100%;
+    height:100%;
+}
+
+@media(max-width:15cm){
+    .moviecard{
+        display:block;
+        width:50%;
+        height:70rem;
+        margin:5px auto;
+    }
+    .title{
+        font-size:5em;
+    }
+}
+@media(any-hover){
+    .moviecard:hover{
+        cursor:pointer;
+    }
+    .moviecard img:hover{
+        filter:brightness(0.5);
+    }
+}

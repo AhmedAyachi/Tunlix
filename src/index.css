@@ -9,7 +9,11 @@
     -moz-user-select:none;
     -ms-user-select:none;
 }
-#___gatsby{
+body{
     overflow-x:hidden;
-    color:red;
+    background-color:#231f20;
+}
+@font-face{
+    font-family:fredokaone;
+    src:url("./Assets//Fonts/FredokaOne-Regular.ttf");
 }

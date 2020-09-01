@@ -8,5 +8,8 @@ export {default as wickcover1} from "./Images/JohnWick1_cover.png";
 export {default as wickcover2} from "./Images/JohnWick2_cover.png";
 export {default as wickcover3} from "./Images/JohnWick3_cover.png";
 export {default as spidercover} from "./Images/SpidermanHomecoming_cover.png";
+export {default as deathnotecover} from "./Images/DeathNote_cover.png";
+export {default as piratescover} from "./Images/Piratesofthecaribbeandeadmentellnotales_cover.png";
+export {default as teenwolfcover} from "./Images/TeenWolf_cover.png";
 
 //Videos:

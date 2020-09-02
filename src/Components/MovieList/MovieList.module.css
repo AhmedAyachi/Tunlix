@@ -2,3 +2,15 @@
     height:fit-content; 
     text-align:center;
 }
+.nomoviemsg{
+    color:white;
+    font-family:fredokaone;
+    margin-top:10%;
+    opacity:0.5;
+}
+
+@media(max-width:25cm){
+    .nomoviemsg{
+        font-size:4rem;
+    }
+}

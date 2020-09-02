@@ -22,9 +22,15 @@ export default function MovieReducer(state=movieState,action){
 
 function getMovies(){
     return [
-        new Movie("Black Mirror",blackmirrorcover),new Movie("Money Hiest",moneyhiestcover),new Movie("Mr Robot",mrrobotcover),
-        new Movie("Jhon Wick 1",wickcover1),new Movie("Jhon Wick 2",wickcover2),new Movie("Jhon Wick 3",wickcover3),
-        new Movie("Spider Man Home Coming",spidercover),new Movie("Death Note",deathnotecover),new Movie("Teen Wolf",teenwolfcover),
-        new Movie("Pirate Of The Caribbean",piratescover),
+        new Movie("Black Mirror",blackmirrorcover,3),
+        new Movie("Money Hiest",moneyhiestcover,3.25),
+        new Movie("Mr Robot",mrrobotcover,4.5),
+        new Movie("Jhon Wick 1",wickcover1,4),
+        new Movie("Jhon Wick 2",wickcover2,3.5),
+        new Movie("Jhon Wick 3",wickcover3,3),
+        new Movie("Spider Man Home Coming",spidercover,3.5),
+        new Movie("Death Note",deathnotecover,4),
+        new Movie("Teen Wolf",teenwolfcover,3.5),
+        new Movie("Pirate Of The Caribbean",piratescover,4.5),
     ];
 }

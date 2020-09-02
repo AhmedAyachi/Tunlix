@@ -11,5 +11,6 @@ export {default as spidercover} from "./Images/SpidermanHomecoming_cover.png";
 export {default as deathnotecover} from "./Images/DeathNote_cover.png";
 export {default as piratescover} from "./Images/Piratesofthecaribbeandeadmentellnotales_cover.png";
 export {default as teenwolfcover} from "./Images/TeenWolf_cover.png";
+export {default as fullstar} from "./Images/FullStar_0.png";
 
 //Videos:

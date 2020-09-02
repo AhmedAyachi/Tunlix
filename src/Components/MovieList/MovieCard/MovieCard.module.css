@@ -38,6 +38,13 @@
     .details{
         font-size:5em;
     }
+    .details:active{
+        opacity:1;
+        transition:0.5s;
+    }
+    .details img{
+        max-width:5rem;
+    }
 }
 @media(any-hover){
     .moviecard:hover{

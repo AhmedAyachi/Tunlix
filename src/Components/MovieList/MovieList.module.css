@@ -8,6 +8,10 @@
     margin-top:10%;
     opacity:0.5;
 }
+.filterbtn{
+    position:absolute;
+    max-width:10rem;
+}
 
 @media(max-width:25cm){
     .nomoviemsg{

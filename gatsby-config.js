@@ -8,7 +8,7 @@ module.exports = {
         {
             resolve:"gatsby-plugin-manifest",
             options:{
-                icon:"src/Assets/Images/gatsby-icon.png",
+                icon:"src/Assets/Images/MyLogo_0.png",
             }
         },
         {

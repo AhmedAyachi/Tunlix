@@ -17,6 +17,7 @@ module.exports = {
                 alias:{
                     "assets":`${__dirname}/src/Assets`,
                     "estate":`${__dirname}/src/Estate.js`,
+                    "actions":`${__dirname}/src/Store/Actions`,
                 },
             }
         },

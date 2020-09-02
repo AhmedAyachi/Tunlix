@@ -23,12 +23,12 @@
     height:100%;
 }
 
-@media(max-width:15cm){
+@media(max-width:20cm){
     .moviecard{
-        display:block;
-        width:50%;
-        height:70rem;
-        margin:5px auto;
+        /*display:block;*/
+        width:40%;
+        height:50rem;
+        margin:5px;
     }
     .title{
         font-size:5em;

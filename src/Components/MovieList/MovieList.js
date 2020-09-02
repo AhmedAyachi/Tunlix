@@ -1,14 +1,14 @@
 import React from "react";
 import css from "./MovieList.module.css";
 import MovieCard from "./MovieCard/MovieCard";
+import {useSelector} from "react-redux";
 
 
-export default function MovieList({movies}){
+export default function MovieList(){
+    const movies=useSelector(store=>store.movie.searchedmovies);
     return (
         <div className={css.movielist}>
-            {movies.map(movie=>(
-                <MovieCard movie={movie}/>
-            ))}
+            {movies.map((movie,index)=><MovieCard key={`${movie.name}_${index}`} movie={movie}/>)}
         </div>
     )
 }

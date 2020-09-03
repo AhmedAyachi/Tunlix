@@ -19,7 +19,7 @@ const getRateStars=(rate=2)=>{
     const rating=[];
     const length=Math.round(rate);
     for(let i=0;i<length;i++){
-        rating.push(<img alt="" src={fullstar}/>);
+        rating.push(<img key={`ratingstar_${i}`} alt="" src={fullstar}/>);
     }
     return rating;
 }

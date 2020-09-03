@@ -1,0 +1,41 @@
+.filtermenu{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    position:absolute;
+    margin:0 auto;left:0;right:0;
+    top:109%;
+    width:90%;
+    height:150px;
+    background-color:#171a13;
+    border:2px solid #cc0000;   
+    border-top:none;
+    z-index:2;
+    color:white;
+    font-family:fredokaone;
+    font-size:2rem;
+}
+.ratingsection{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+}
+.ratingstars{
+    display:flex;
+}
+.ratingstars img{
+    max-width:1em;
+    padding:0 1px;
+}
+
+@media(max-width:25cm){
+    .filtermenu{
+        font-size:3rem;
+    }
+}
+
+@media(any-hover){
+    .ratingstars img:hover{
+        cursor:pointer;
+    }
+}

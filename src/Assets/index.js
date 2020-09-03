@@ -18,5 +18,8 @@ export {default as quarterstar} from "./Images/QuarterStar_0.png";
 export {default as quarterhalfstar} from "./Images/QuarterHalfStar_0.png";
 export {default as icon} from "./Images/MyLogo_0.png";
 export {default as filtericon} from "./Images/Filter_0.png";
+export {default as closer} from "./Images/Closer_0.png";
+export {default as playbtn0} from "./Images/PlayButton_0.png";
+export {default as playbtn1} from "./Images/PlayButton_1.png";
 
 //Videos:

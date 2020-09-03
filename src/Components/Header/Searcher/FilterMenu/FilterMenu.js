@@ -1,26 +1,42 @@
 import React,{useRef} from "react";
 import css from "./FilterMenu.module.css";
-import {emptystar,fullstar,halfstar,quarterstar,quarterhalfstar} from "assets";
+import {emptystar,fullstar,halfstar,quarterstar,quarterhalfstar,closer} from "assets";
+import * as H from "./Hooks";
 
 
 export default function FilterMenu({reference}){
+    const setMoviesByRate=H.useMoviesRateFilter();
     const refs={
         starts:[useRef(),useRef(),useRef(),useRef(),useRef()],
     }
     return (
         <div className={css.filtermenu} style={styles.filtermenu} ref={reference}>
-            <div className={css.ratingsection}>
+            <div className={css.row0}>
                 <p>Rating:</p>
-                <div className={css.ratingstars}>{starsprops.map((props,index)=>{
-                    props.ref=refs.starts[index];
-                    return (
-                        <img alt="" {...props}
-                        onMouseEnter={()=>{handleMouseEnter(index)}}
-                        onClick={()=>{handleClick(index)}}
-                        onMouseLeave={()=>{handleMouseLeave(index)}}
-                    />
-                    )
-                })}</div>
+                <div className={css.ratingstars}>
+                    {starsprops.map((props,index)=>{
+                        props.ref=refs.starts[index];
+                        return (
+                            <img alt="" {...props}
+                                onMouseEnter={()=>{handleMouseEnter(index)}}
+                                onClick={()=>{handleClick(index);setMoviesByRate(index+1)}}
+                                onMouseLeave={()=>{handleMouseLeave()}}
+                            />
+                        )
+                    })}
+                </div>
+                <img 
+                    alt=""
+                    className={css.noratebtn}
+                    src={closer}
+                    onClick={()=>{
+                        setMoviesByRate(0);
+                        for(let i=0;i<starsprops.length;i++){
+                            starsprops[i].src=emptystar;
+                            starsprops[i].ref.current.src=emptystar;
+                        }
+                    }}
+                />
             </div>  
         </div> 
     )
@@ -42,12 +58,10 @@ const starsprops=(function(){
 
 const handleMouseEnter=(index=0)=>{
     for(let i=0;i<=index;i++){
-        starsprops[i].src=emptystar;
         starsprops[i].ref.current.src=fullstar;
     }
     const laststar=starsprops.length-1;
     for(let i=laststar;i>index;i--){
-        starsprops[i].src=emptystar;
         starsprops[i].ref.current.src=emptystar;
     }
 }
@@ -55,9 +69,14 @@ const handleClick=(index=0)=>{
     for(let i=0;i<=index;i++){
         starsprops[i].src=fullstar;
     }
+    const laststar=starsprops.length-1;
+    for(let i=laststar;i>index;i--){
+        starsprops[i].src=emptystar;
+    }
 }
-const handleMouseLeave=(index=0)=>{
-    for(let i=0;i<=index;i++){
+const handleMouseLeave=()=>{
+    const length=starsprops.length;
+    for(let i=0;i<length;i++){
         starsprops[i].ref.current.src=starsprops[i].src;
     }
 }

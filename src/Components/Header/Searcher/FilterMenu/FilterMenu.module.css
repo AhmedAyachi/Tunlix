@@ -1,12 +1,12 @@
 .filtermenu{
     display:flex;
     flex-direction:column;
-    justify-content:space-around;
+    justify-content:flex-start;
     position:absolute;
     margin:0 auto;left:0;right:0;
     top:109%;
     width:90%;
-    height:150px;
+    height:fit-content;
     background-color:#171a13;
     border:2px solid #cc0000;   
     border-top:none;
@@ -15,7 +15,7 @@
     font-family:fredokaone;
     font-size:2rem;
 }
-.ratingsection{
+.row0{
     display:flex;
     justify-content:space-around;
     align-items:center;
@@ -27,6 +27,10 @@
     max-width:1em;
     padding:0 1px;
 }
+.noratebtn{
+    max-width:1em;
+    margin:5px;
+}
 
 @media(max-width:25cm){
     .filtermenu{
@@ -36,6 +40,9 @@
 
 @media(any-hover){
     .ratingstars img:hover{
+        cursor:pointer;
+    }
+    .noratebtn:hover{
         cursor:pointer;
     }
 }

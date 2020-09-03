@@ -1,6 +1,6 @@
 import React from "react";
 import css from "./MovieCard.module.css";
-import {fullstar} from "assets";
+import {fullstar,playbtn0,playbtn1} from "assets";
 
 
 export default function MovieCard({movie}){
@@ -9,6 +9,7 @@ export default function MovieCard({movie}){
             <div className={css.details}>
                 <p>{movie.title}</p>
                 <div className={css.rating}>{getRateStars(movie.rate)}</div>
+                <img alt="" src={playbtn1}/>
             </div>
             <img alt="" src={movie.image}/>
         </div>

@@ -35,6 +35,12 @@
 @media(any-hover){
     .row0 img:hover{
         cursor:pointer;
-        filter:brightness(0.8)
+        filter:brightness(0.8);
+    }
+}
+
+@media(hover:none){
+    .row0 img:active{
+        filter:brightness(0.8);
     }
 }

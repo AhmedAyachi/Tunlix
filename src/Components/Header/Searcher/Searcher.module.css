@@ -38,7 +38,13 @@
 @media(any-hover){
     .searcher>img:hover{
         cursor:pointer;
-        filter:grayscale(0.3);
+        filter:brightness(0.6);
         max-height:2em;
+    }
+}
+
+@media(hover:none){
+    .searcher>img:active{
+        filter:brightness(0.4);
     }
 }

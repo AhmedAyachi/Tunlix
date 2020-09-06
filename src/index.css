@@ -15,6 +15,12 @@ body{
     background-color:#231f20;
 }
 
+@media(max-width:25cm){
+    :root{
+        font-size:2vw;
+    }
+}
+
 @font-face{
     font-family:fredokaone;
     src:url("./Assets//Fonts/FredokaOne-Regular.ttf");

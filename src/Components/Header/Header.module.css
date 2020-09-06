@@ -21,23 +21,18 @@
 }
 
 .usericon{
-    width:3vw;
-    height:3vw;
+    width:3em;
+    height:3em;
     border-radius:50px; 
     background-color:#cc0000;
 }
 
 @media(max-width:15cm){
-    .row0 h1{
-        font-size:10em;
-    }
     .row0{
         flex-direction:column;
     }
     .usericon{
         position:absolute;
-        width:5rem;
-        height:5rem;
         top:5px;
         right:5px;
     }

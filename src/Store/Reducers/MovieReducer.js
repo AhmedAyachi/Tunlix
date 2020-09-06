@@ -2,6 +2,7 @@
 const movieState={
     loaded:[],
     movies:[],
+    loading:true,
 }
 
 export default function MovieReducer(state=movieState,action){
@@ -10,6 +11,8 @@ export default function MovieReducer(state=movieState,action){
             return {...state,...action.data};
         case "setMovies":
             return {...state,loaded:action.data,movies:action.data};
+        case "setLoading":
+            return {...state,loading:action.data};
         default:
             return {...state};
     }

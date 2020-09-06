@@ -1,17 +1,18 @@
 import React from "react";
 import css from "./MovieCard.module.css";
-import {fullstar,playbtn0,playbtn1} from "assets";
+import {fullstar,playbtn1} from "assets";
 
 
 export default function MovieCard({movie}){
+    const {title,poster_path,vote_average}=movie;
     return (
         <div className={css.moviecard}>
             <div className={css.details}>
-                <p>{movie.title}</p>
-                <div className={css.rating}>{getRateStars(movie.rate)}</div>
+                <div className={css.title}>{title}</div>
+                <div className={css.rating}>{getRateStars(vote_average/2)}</div>
                 <img alt="" src={playbtn1}/>
             </div>
-            <img alt="" src={movie.image}/>
+            <img alt="" src={`https://image.tmdb.org/t/p/w500/${poster_path}`} onLoadStart={()=>{console.log("image is loading")}}/>
         </div>
     )
 }

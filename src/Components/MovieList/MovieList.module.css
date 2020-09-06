@@ -1,6 +1,13 @@
 .movielist{
+    display:flex;
+    flex-direction:column;
     height:fit-content; 
     text-align:center;
+}
+.row0{
+    display:flex;
+    justify-content:space-around;
+    height:30px;
 }
 .nomoviemsg{
     color:white;

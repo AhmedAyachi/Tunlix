@@ -6,3 +6,4 @@ const Reducer=combineReducers({
     movie:MovieReducer, 
 });
 export default Reducer;
+export {default as Middleware} from "./MiddleWare";

@@ -1,2 +1,2 @@
 //Movie Actions :
-export {setMovie} from "./MovieActions";
+export {setMovie,setMovies,loadMovies} from "./MovieActions";

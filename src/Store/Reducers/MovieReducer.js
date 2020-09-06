@@ -1,7 +1,7 @@
 
 const movieState={
+    loaded:[],
     movies:[],
-    searchedmovies:[],
 }
 
 export default function MovieReducer(state=movieState,action){
@@ -9,7 +9,7 @@ export default function MovieReducer(state=movieState,action){
         case "setMovie":
             return {...state,...action.data};
         case "setMovies":
-            return {...state,movies:action.data,searchedmovies:action.data};
+            return {...state,loaded:action.data,movies:action.data};
         default:
             return {...state};
     }

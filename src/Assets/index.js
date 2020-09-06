@@ -21,5 +21,6 @@ export {default as filtericon} from "./Images/Filter_0.png";
 export {default as closer} from "./Images/Closer_0.png";
 export {default as playbtn0} from "./Images/PlayButton_0.png";
 export {default as playbtn1} from "./Images/PlayButton_1.png";
+export {default as arrow} from "./Images/Arrow_0.png";
 
 //Videos:

@@ -12,7 +12,7 @@ export default function MovieCard({movie}){
                 <div className={css.rating}>{getRateStars(vote_average/2)}</div>
                 <img alt="" src={playbtn1}/>
             </div>
-            <img alt="" src={`https://image.tmdb.org/t/p/w500/${poster_path}`} onLoadStart={()=>{console.log("image is loading")}}/>
+            <img alt="" src={`https://image.tmdb.org/t/p/w500/${poster_path}`}/>
         </div>
     )
 }

@@ -1,10 +1,9 @@
 import {useEffect} from "react";
-import {useDispatch} from "react-redux";
+import {setMovies} from "actions";
 
 
-export function useMovies(){
-    const dispatch=useDispatch();
+export function useMovies(dispatch){
     useEffect(()=>{
-        dispatch({type:"setMovies",data:2});
+        dispatch(setMovies(1));
     },[]);
 }

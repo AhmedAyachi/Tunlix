@@ -6,8 +6,12 @@
 }
 .row0{
     display:flex;
-    justify-content:space-around;
+    justify-content:space-evenly;
+    align-items:center;
     height:30px;
+}
+.row0 img{
+    max-width:2rem;
 }
 .nomoviemsg{
     color:white;
@@ -23,5 +27,11 @@
 @media(max-width:25cm){
     .nomoviemsg{
         font-size:4rem;
+    }
+}
+@media(any-hover){
+    .row0 img:hover{
+        cursor:pointer;
+        filter:brightness(0.8)
     }
 }

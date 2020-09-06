@@ -23,7 +23,7 @@ export const loadMovies=(pagepair=1)=>toreducer=>{
     then(responses=>responses.map(response=>response.json())).
     then(promises=>(async function(){
         const movies=[];
-        for(let i=0;i<promises.length;i++){
+        for(let i=0;i<2;i++){
             const data=await promises[i];
             movies.push(...data.results);
         }

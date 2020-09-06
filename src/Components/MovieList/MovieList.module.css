@@ -28,6 +28,9 @@
     .nomoviemsg{
         font-size:4rem;
     }
+    .row0 img{
+        max-width:5rem;
+    }
 }
 @media(any-hover){
     .row0 img:hover{

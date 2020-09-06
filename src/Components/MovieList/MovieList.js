@@ -21,7 +21,7 @@ export default function MovieList(){
                         src={arrow}
                         style={props.style}
                         title={`${props.title} movies collection`}
-                        onClick={()=>{props.setPagepair();dispatch(setMovies(pagepair))}}
+                        onClick={()=>{props.setPagepair(dispatch)}}
                     />
                 ))}
             </div>
@@ -34,6 +34,21 @@ export default function MovieList(){
 }
 
 const arrowsprops=[
-    {title:"Previous",setPagepair:()=>{pagepair--},style:{transform:"scaleX(-1)"}},
-    {title:"Next",setPagepair:()=>{pagepair++},style:{}},
+    {title:"Previous",setPagepair:(dispatch)=>{Pagepair.previous(dispatch)},style:{transform:"scaleX(-1)"}},
+    {title:"Next",setPagepair:(dispatch)=>{Pagepair.next(dispatch)},style:{}},
 ];
+
+const Pagepair=new (function(){
+    this.previous=(dispatch)=>{
+        if(pagepair>1){
+            pagepair--;
+            dispatch(setMovies(pagepair));
+        }
+    }
+    this.next=(dispatch)=>{
+        if(pagepair<250){
+            pagepair++;
+            dispatch(setMovies(pagepair));
+        }
+    }
+})();

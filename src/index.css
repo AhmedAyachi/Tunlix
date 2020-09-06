@@ -14,6 +14,7 @@ body{
     overflow-x:hidden;
     background-color:#231f20;
 }
+
 @font-face{
     font-family:fredokaone;
     src:url("./Assets//Fonts/FredokaOne-Regular.ttf");

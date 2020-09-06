@@ -30,7 +30,7 @@ function MovieList(props){
             <div className={css.row1}>
                 {movies.map((movie,index)=><MovieCard key={`${movie.title}_${index}`} movie={movie}/>)}
             </div>
-            {movies.length===0&&<h1 className={css.nomoviemsg}>Can't find movie</h1>}
+            {!loading&&movies.length===0&&<h1 className={css.nomoviemsg}>Can't find movie</h1>}
         </div>
     )
 }

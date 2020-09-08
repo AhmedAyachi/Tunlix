@@ -1,5 +1,6 @@
 import React from "react";
 import css from "./MovieCard.module.css";
+import {Link} from "gatsby";
 import {fullstar,playbtn1} from "assets";
 
 
@@ -10,7 +11,7 @@ export default function MovieCard({movie}){
             <div className={css.details}>
                 <div className={css.title}>{title}</div>
                 <div className={css.rating}>{getRateStars(vote_average/2)}</div>
-                <img alt="" src={playbtn1}/>
+                <Link to={`/movies/${title}`}><img className={css.playbtn} alt="" src={playbtn1}/></Link>
             </div>
             <img alt="" src={`https://image.tmdb.org/t/p/w500/${poster_path}`}/>
         </div>

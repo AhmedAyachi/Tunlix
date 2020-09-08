@@ -9,9 +9,9 @@ export const setMovie=(key,value)=>{
     }    
 }
 
-export const setMovies=(pagepair=1)=>({
+export const setMovies=(collection=1)=>({
     type:"setMovies",
-    data:pagepair,
+    data:collection,
 })
 
 export const setLoading=(value)=>({
@@ -19,10 +19,12 @@ export const setLoading=(value)=>({
     data:value,
 })
 
-export const loadMovies=(pagepair=1)=>toreducer=>{
+export const loadMovies=(collection=1)=>toreducer=>{
     toreducer(setLoading(true));
     const fetchs=[];
-    for(let i=pagepair*2;i>pagepair-2;i--){
+    const start=collection*2;
+    const end=start-2;
+    for(let i=start;i>end;i--){
         fetchs.push(fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${apikey}&language=en&include_video=true&page=${i}`));
     }
     Promise.all(fetchs).

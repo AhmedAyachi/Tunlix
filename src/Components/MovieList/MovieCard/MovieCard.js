@@ -11,7 +11,7 @@ export default function MovieCard({movie}){
             <div className={css.details}>
                 <div className={css.title}>{title}</div>
                 <div className={css.rating}>{getRateStars(vote_average/2)}</div>
-                <Link to={`/${id}`} state={{movie}}><img className={css.playbtn} alt="" src={playbtn1}/></Link>
+                <Link to={`/${id}`}><img className={css.playbtn} alt="" src={playbtn1}/></Link>
             </div>
             <img alt="" src={poster_path}/>
         </div>

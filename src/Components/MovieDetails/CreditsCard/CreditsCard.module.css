@@ -1,0 +1,5 @@
+.creditscard{
+    display:flex;
+    overflow-x:auto;
+    color:white;
+}

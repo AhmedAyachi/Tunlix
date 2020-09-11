@@ -1,0 +1,39 @@
+.castcard{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    max-width:10rem;
+    font-size:1rem;
+    font-family:fredokaone;
+    background-color:whitesmoke;
+    border-radius:1rem;
+    margin:10px 5px;
+}
+.photo{
+    width:10rem;
+    border-radius:inherit;
+    border-bottom-right-radius:0;
+    border-bottom-left-radius:0;
+}
+.castcard p{
+    padding:3px;
+    text-align:center;
+}
+.name{
+    color:black;
+    font-size:1.3em;
+}
+.character{
+    color:black;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:bold;
+}
+
+@media(max-width:25cm){
+    .castcard{
+        max-width:15rem;
+    }
+    .photo{
+        width:15rem;
+    }
+}

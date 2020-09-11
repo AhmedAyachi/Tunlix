@@ -2,20 +2,13 @@
     font-size:1rem;
 }
 .row0{
-    position:relative;
-    display:flex;
-    background-color:#ffae0009;
-    overflow:hidden;
-    color:white;
+    border-bottom:1px solid white;
 }
-.backdrop{
-    position:absolute;
-    margin:0 auto;left:0;right:0;
-    width:100%;
-    opacity:0.1;
-    z-index:-12;
+.row1{
+    border-top:1px solid white;
 }
-.poster{
-    max-width:15em;
-    margin:0.5em;
+.loadinganim{
+    display:block;
+    margin:0 auto;
+    max-width:20em;
 }

@@ -7,13 +7,10 @@ import Reducer,{Middleware} from "./src/Store";
 
 
 const store=createStore(Reducer,composeWithDevTools(applyMiddleware(Middleware)));
-function StoreProvider({element}){
+export const wrapRootElement=({element})=>{
     return (
         <Provider store={store}>
             {element}
         </Provider>
     )
 }
-
-
-export const wrapRootElement=StoreProvider;

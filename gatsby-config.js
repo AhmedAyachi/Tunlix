@@ -15,12 +15,18 @@ module.exports = {
             resolve:"gatsby-plugin-alias-imports",
             options:{
                 alias:{
+                    "components":`${__dirname}/src/Components`,
                     "assets":`${__dirname}/src/Assets`,
                     "estate":`${__dirname}/src/Estate.js`,
                     "actions":`${__dirname}/src/Store/Actions`,
                     "afile":`${__dirname}/src/Afile.js`,
                 },
             }
+        },
+        {
+            resolve:"gatsby-plugin-create-client-paths",
+            options:{
+                prefixes:["/*"]},
         },
     ],
 }

@@ -1,19 +1,19 @@
 import React from "react";
 import css from "./MovieCard.module.css";
-import {Link} from "gatsby";
+import {Link} from "@reach/router";
 import {fullstar,playbtn1} from "assets";
 
 
 export default function MovieCard({movie}){
-    const {title,poster_path,vote_average}=movie;
+    const {title,poster_path,vote_average,id}=movie;
     return (
         <div className={css.moviecard}>
             <div className={css.details}>
                 <div className={css.title}>{title}</div>
                 <div className={css.rating}>{getRateStars(vote_average/2)}</div>
-                <Link to={`/movies/${title}`}><img className={css.playbtn} alt="" src={playbtn1}/></Link>
+                <Link to={`/${id}`} state={{movie}}><img className={css.playbtn} alt="" src={playbtn1}/></Link>
             </div>
-            <img alt="" src={`https://image.tmdb.org/t/p/w500/${poster_path}`}/>
+            <img alt="" src={poster_path}/>
         </div>
     )
 }

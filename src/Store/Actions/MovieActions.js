@@ -1,4 +1,4 @@
-import {apikey} from "estate";
+import {apikey,Movie} from "estate";
 
 export const setMovie=(key,value)=>{
     const data={};
@@ -25,7 +25,7 @@ export const loadMovies=(collection=1)=>toreducer=>{
     const start=collection*2;
     const end=start-2;
     for(let i=start;i>end;i--){
-        fetchs.push(fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${apikey}&language=en&include_video=true&page=${i}`));
+        fetchs.push(fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${apikey}&language=en&page=${i}`));
     }
     Promise.all(fetchs).
     then(responses=>responses.map(response=>response.json())).
@@ -36,6 +36,15 @@ export const loadMovies=(collection=1)=>toreducer=>{
             movies.push(...data.results);
         }
         return movies;
+    }).
+    then(async movies=>{
+        for(let i=0;i<movies.length;i++){
+            const movie=movies[i];
+            const response=await fetch(`https://api.themoviedb.org/3/movie/${movie.id}?api_key=${apikey}`);
+            const data=await response.json();
+            movies[i]={...movie,...data};
+        }
+        return movies.map(movie=>new Movie(movie));
     }).
     then(data=>{
         toreducer({type:"setMovies",data});

@@ -1,29 +1,27 @@
 import React from "react";
 import css from "./MovieList.module.css";
 import MovieCard from "./MovieCard/MovieCard";
-import {useSelector,useDispatch,connect as Connect} from "react-redux";
+import {useDispatch,connect as Connect} from "react-redux";
 import {setMovies} from "actions";
 import {arrow,loadinganim} from "assets";
-import * as H from "./Hooks";
 
 
 let collection=1;
 function MovieList(props){
     const dispatch=useDispatch();
-    H.useMovies(collection,dispatch);
     const {movies,loading}=props;
     return (
         <div className={css.movielist}>
             <div className={css.row0}>
-                {arrowsprops.map((props,i)=>(
+                {arrowskeys.map((keys,i)=>(
                     <img 
                         alt=""
-                        key={`${props.title}btn_${i}`}
+                        key={`${keys.title}btn_${i}`}
                         className={css.arrows}
                         src={arrow}
-                        style={props.style}
-                        title={`${props.title} movies collection`}
-                        onClick={()=>{props.setCollection(dispatch)}}
+                        style={keys.style}
+                        title={`${keys.title} movies collection`}
+                        onClick={()=>{keys.setCollection(dispatch)}}
                     />
                 ))}
                 {loading&&<img className={css.loader} alt="" src={loadinganim}/>}
@@ -42,7 +40,7 @@ const getStore=store=>({
 })
 
 export default Connect(getStore)(MovieList);
-const arrowsprops=[
+const arrowskeys=[
     {title:"Previous",setCollection:(dispatch)=>{Collection.previous(dispatch)},style:{transform:"scaleX(-1)"}},
     {title:"Next",setCollection:(dispatch)=>{Collection.next(dispatch)},style:{}},
 ];

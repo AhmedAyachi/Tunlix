@@ -6,7 +6,6 @@ import CastCard from "./CastCard/CastCard";
 export default function CreditsCard({credits}){
     const casts=credits.cast;
     const crews=credits.crew;
-    console.log(casts);
     return (
         <div className={css.creditscard}>
             {casts.filter(cast=>cast.profile_path).map((cast,i)=>(

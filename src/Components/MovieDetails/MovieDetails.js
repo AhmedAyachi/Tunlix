@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useRef} from "react";
 import css from "./MovieDetails.module.css";
 import {Movie} from "estate";
 import {loadinganim} from "assets";
@@ -21,7 +21,10 @@ export default function MovieDetails(props){
             </div>
             <div className={css.row1}>
                 {credits?
-                    <CreditsCard credits={credits}/>:
+                    <>
+                        <p className={css.casttext}>Cast</p>
+                        <CreditsCard credits={credits}/>
+                    </>:
                     <img className={css.loadinganim} alt="" src={loadinganim}/>
                 }
             </div>

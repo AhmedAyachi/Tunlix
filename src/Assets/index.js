@@ -22,6 +22,7 @@ export {default as closer} from "./Images/Closer_0.png";
 export {default as playbtn0} from "./Images/PlayButton_0.png";
 export {default as playbtn1} from "./Images/PlayButton_1.png";
 export {default as arrow} from "./Images/Arrow_0.png";
+export {default as playbtn} from "./Images/Play_1.png";
 
 //Gifs:
 export {default as loadinganim} from "./Gifs/Loading_1.gif";

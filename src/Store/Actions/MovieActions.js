@@ -35,15 +35,6 @@ export const loadMovies=(collection=1)=>toreducer=>{
             const data=await promises[i];
             movies.push(...data.results);
         }
-        return movies;
-    }).
-    then(async movies=>{
-        for(let i=0;i<movies.length;i++){
-            const movie=movies[i];
-            const response=await fetch(`https://api.themoviedb.org/3/movie/${movie.id}?api_key=${apikey}`);
-            const data=await response.json();
-            movies[i]={...movie,...data};
-        }
         return movies.map(movie=>new Movie(movie));
     }).
     then(data=>{

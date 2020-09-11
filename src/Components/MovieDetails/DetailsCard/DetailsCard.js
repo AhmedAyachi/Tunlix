@@ -4,7 +4,6 @@ import css from "./DetailsCard.module.css";
 
 export default function DetailsCard(props){
     const {movie}=props;
-    console.log(movie);
     return (
         <div className={css.detailscard}>
             <img alt="" className={css.backdrop} src={movie.backdrop_path}/>
@@ -27,4 +26,8 @@ const details=movie=>[
     ["Overview","overviewheader"],
 ]
 
-const getDuration=runtime=>Math.floor(runtime/60)+"h "+runtime%60+"min";
+const getDuration=runtime=>{
+    const hours= Math.floor(runtime/60);
+    const minutes=runtime%60;
+    return (hours?hours+"h ":"")+(minutes?minutes+"min":"");
+}

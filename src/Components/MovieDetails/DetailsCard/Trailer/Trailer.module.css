@@ -11,20 +11,29 @@
     font-size:1rem;
     padding-bottom:1rem;
 }
+.blur{
+    position:fixed;
+    width:100vw;
+    height:100vh;
+    top:0;
+    backdrop-filter:blur(4px);
+}
 .trailer>img{
     max-width:1em;
     align-self:flex-end;
     margin-bottom:5px;
+    z-index:1;
 }
 .trailer>iframe{
     width:95%;
     height:100%;
+    z-index:1;
 }
 
 @media(max-width:25cm){
     .trailer{
         width:100%;
-        height:auto;
+        height:41%;
         top:0;
     }
     .trailer>img{

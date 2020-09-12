@@ -8,6 +8,7 @@ export default function Trailer(props){
     const {trailer,reference,style}=props;
     return (
         <div ref={reference} className={css.trailer} style={style}>
+            <div className={css.blur}></div>
             <img 
                 alt="X" 
                 src={closer}

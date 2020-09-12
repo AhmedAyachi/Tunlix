@@ -2,7 +2,7 @@ import React,{createRef, useRef,useState} from "react";
 import css from "./DetailsCard.module.css";
 import Trailer from "./Trailer/Trailer";
 import {playbtn} from "assets";
-import {apikey} from "estate";
+import {apikey} from "lock";
 import {fadeIn} from "afile";
 
 

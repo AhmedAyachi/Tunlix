@@ -20,6 +20,7 @@ module.exports = {
                     "estate":`${__dirname}/src/Estate.js`,
                     "actions":`${__dirname}/src/Store/Actions`,
                     "afile":`${__dirname}/src/Afile.js`,
+                    "lock":`${__dirname}/src/Lock.js`,
                 },
             }
         },

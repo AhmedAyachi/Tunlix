@@ -1,4 +1,5 @@
-import {apikey,Movie} from "estate";
+import {Movie} from "estate";
+import {apikey} from "lock";
 
 export const setMovie=(key,value)=>{
     const data={};

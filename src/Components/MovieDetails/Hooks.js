@@ -1,6 +1,5 @@
 import {useEffect,useState} from "react";
-import {apikey} from "estate";
-import {} from "actions";
+import {apikey} from "lock";
 
 
 export const useMovieDetails=(id)=>{
